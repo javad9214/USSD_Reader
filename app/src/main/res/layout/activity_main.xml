@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.avanikan_pc_003.ussd_reader.MainActivity">
+
+   <EditText
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/phone_call"
+       android:hint="Dial Your USSD Code "
+       android:textSize="20dp"
+       android:inputType="phone"
+       android:layout_alignBaseline="@+id/star"
+       android:layout_alignBottom="@+id/star"
+       android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/star"
+        android:textSize="25dp"
+        android:text="*"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/phone_call"
+        android:layout_toStartOf="@+id/phone_call"
+        android:layout_marginTop="52dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sharp"
+        android:layout_toRightOf="@+id/phone_call"
+        android:text="#"
+        android:textSize="25dp"
+        android:layout_marginTop="52dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_call"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="call"
+        android:id="@+id/btn_call"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_receiver"
+        android:layout_below="@+id/btn_call"
+        android:hint="Enter Reciever Number ..."
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:inputType="phone"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMS"
+        android:id="@+id/sms"
+        android:layout_below="@+id/btn_call"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/holo_red_dark"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_sms"
+        android:layout_marginTop="80dp"
+        android:layout_toRightOf="@+id/sms"
+        android:layout_below="@+id/btn_call"
+        android:hint="Enter your message ..."
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send"
+        android:id="@+id/btn_send"
+        android:layout_below="@+id/btn_call"
+        android:layout_marginTop="80dp"
+        android:layout_toRightOf="@+id/edit_sms"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/send"
+        android:layout_below="@+id/sms"
+        android:layout_marginTop="40dp"
+        android:text="something send "
+        android:textSize="25dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/holo_blue_bright"/>
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll_received"
+        android:layout_below="@+id/send"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/holo_green_light"
+        android:layout_alignParentRight="true"
+        >
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/textView_receiver"
+         android:text="something received "
+         android:textSize="25dp"/>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
